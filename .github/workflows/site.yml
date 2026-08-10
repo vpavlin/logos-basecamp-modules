@@ -53,10 +53,15 @@ jobs:
 
       - name: Generate page
         run: |
+          FP=2373710A76ACB09F287F053E99E533F9D3685529C44E9027CDBC79B1DC0C9105
           python3 site/gen_modules_page.py \
             --index index.json \
+            --fdroid-index https://apps.vpavlin.xyz/fdroid/repo/index-v2.json \
+            --fdroid-base  https://apps.vpavlin.xyz/fdroid/repo \
+            --fdroid-repo-url "https://apps.vpavlin.xyz/fdroid/repo?fingerprint=$FP" \
             --overrides site/overrides.json \
             --out dist/index.html
+          cp logos-repo.json dist/logos-repo.json   # served for the Basecamp "Add repository" step
           echo "modules.vpavlin.xyz" > dist/CNAME
 
       - uses: actions/configure-pages@v5

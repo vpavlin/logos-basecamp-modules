@@ -29,6 +29,9 @@ Usage:
 import argparse, base64, html, io, json, os, sys, tarfile, urllib.request
 
 CATALOG_TITLE = "vpavlin's Logos"
+BASECAMP_REPO_URL = "https://modules.vpavlin.xyz/logos-repo.json"  # paste into Basecamp
+BASECAMP_INSTALL_URL = "https://logos.co"      # where to get the Basecamp desktop app
+FDROID_INSTALL_URL = "https://f-droid.org"     # where to get the F-Droid client
 CACHE_DIR = os.path.expanduser("~/.cache/logos-catalog-icons")
 
 # --------------------------------------------------------------- shared helpers
@@ -263,7 +266,7 @@ def render_grid(cards):
 
 def render_page(apps, modules, fdroid_repo_url, generated_at):
     e = html.escape
-    default = "apps" if (apps or not modules) else "modules"
+    default = "modules" if modules else "apps"        # Basecamp first
     a_on = "on" if default == "apps" else ""
     m_on = "on" if default == "modules" else ""
     add_repo = ""
@@ -274,6 +277,29 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
                  else " · download the APK"))
     mods_sub = (f'{len(modules)} Basecamp app' + ("s" if len(modules) != 1 else "") +
                 " · install with lgpd or the package manager")
+
+    # install help (native <details>, no JS)
+    mods_help = (
+        '<details class="help"><summary>How to install</summary><ol>'
+        f'<li>Install <a href="{e(BASECAMP_INSTALL_URL)}">Basecamp</a>, the Logos desktop app.</li>'
+        f'<li>Open <b>Package Manager &rarr; Add repository</b> and paste '
+        f'<code>{e(BASECAMP_REPO_URL)}</code>.</li>'
+        '<li>Pick a module from the catalog and click <b>Install</b>.</li>'
+        '</ol></details>') if modules else ''
+    fp = fdroid_repo_url.split("fingerprint=", 1)[1].split("&")[0] \
+        if fdroid_repo_url and "fingerprint=" in fdroid_repo_url else ""
+    fbase = fdroid_repo_url.split("?", 1)[0] if fdroid_repo_url else ""
+    add_line = ""
+    if fdroid_repo_url:
+        add_line = ('<li>Tap <b>+ Add F-Droid repo</b> above'
+                    + (f' (or add <code>{e(fbase)}</code>, fingerprint <code>{e(fp)}</code>)'
+                       if fp else '') + '.</li>')
+    apps_help = (
+        '<details class="help"><summary>How to install</summary><ol>'
+        f'<li>Install the <a href="{e(FDROID_INSTALL_URL)}">F-Droid</a> app.</li>'
+        f'{add_line}'
+        '<li>Open the app in F-Droid and tap <b>Install</b>.</li>'
+        '</ol></details>') if apps else ''
     gen = e(generated_at or "")
     return f"""<!doctype html>
 <html lang="en">
@@ -288,6 +314,8 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
     :root:not([data-theme=light]) {{ --bg:#0f1115; --card:#181b21; --fg:#e8eaed;
       --mut:#9aa1ad; --line:#2a2e37; --accent:#6ea8fe; --chip:#232833; }}
   }}
+  :root[data-theme=dark] {{ --bg:#0f1115; --card:#181b21; --fg:#e8eaed; --mut:#9aa1ad;
+    --line:#2a2e37; --accent:#6ea8fe; --chip:#232833; }}
   * {{ box-sizing:border-box; }}
   body {{ margin:0; background:var(--bg); color:var(--fg);
     font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }}
@@ -302,6 +330,15 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
     padding:1px 8px; margin-left:6px; }}
   .tab.on {{ color:var(--fg); border-bottom-color:var(--accent); }}
   .tab.on span {{ background:var(--accent); color:#fff; }}
+  .theme {{ margin-left:auto; align-self:center; background:none; border:0; cursor:pointer;
+    font-size:18px; color:var(--mut); padding:6px 8px; line-height:1; }}
+  .theme:hover {{ color:var(--fg); }}
+  .help {{ margin:12px 24px 0; font-size:13px; color:var(--mut); }}
+  .help summary {{ cursor:pointer; color:var(--accent); font-weight:600; width:max-content; }}
+  .help ol {{ margin:8px 0 0; padding-left:20px; }}
+  .help li {{ margin:3px 0; }}
+  .help code {{ background:var(--chip); padding:1px 6px; border-radius:5px; word-break:break-all; }}
+  .help a {{ color:var(--accent); }}
   .panel {{ display:none; max-width:1080px; margin:0 auto; }}
   .panel.on {{ display:block; }}
   .ptop {{ display:flex; align-items:center; justify-content:space-between; gap:12px;
@@ -335,6 +372,7 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
     font-size:12.5px; }}
   footer code {{ background:var(--chip); padding:1px 6px; border-radius:5px; }}
 </style>
+<script>(function(){{try{{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}}catch(e){{}}}})();</script>
 </head>
 <body>
 <header>
@@ -342,19 +380,22 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
   <p>Local-first apps for Android and Basecamp, on Logos.</p>
 </header>
 <div class="tabs">
-  <button class="tab {a_on}" data-panel="apps">Android <span>{len(apps)}</span></button>
   <button class="tab {m_on}" data-panel="modules">Basecamp <span>{len(modules)}</span></button>
-</div>
-<div class="panel {a_on}" id="panel-apps">
-  <div class="ptop"><span class="sub">{apps_sub}</span>{add_repo}</div>
-  <main>
-{render_grid(apps)}
-  </main>
+  <button class="tab {a_on}" data-panel="apps">Android <span>{len(apps)}</span></button>
+  <button class="theme" id="themeToggle" title="Light / dark" aria-label="Toggle theme">&#9680;</button>
 </div>
 <div class="panel {m_on}" id="panel-modules">
   <div class="ptop"><span class="sub">{mods_sub}</span></div>
+  {mods_help}
   <main>
 {render_grid(modules)}
+  </main>
+</div>
+<div class="panel {a_on}" id="panel-apps">
+  <div class="ptop"><span class="sub">{apps_sub}</span>{add_repo}</div>
+  {apps_help}
+  <main>
+{render_grid(apps)}
   </main>
 </div>
 <footer>
@@ -368,6 +409,14 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
     t.classList.add('on');
     document.getElementById('panel-' + t.dataset.panel).classList.add('on');
   }});
+  var tg = document.getElementById('themeToggle');
+  if (tg) tg.onclick = () => {{
+    var cur = document.documentElement.dataset.theme
+      || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try {{ localStorage.setItem('theme', next); }} catch (e) {{}}
+  }};
 </script>
 </body>
 </html>"""
@@ -398,10 +447,13 @@ def main():
 
     apps = []
     if args.fdroid_index:
-        as_path = None if _is_url(args.fdroid_index) else args.fdroid_index
-        fidx = _read(path=as_path, url=(args.fdroid_index if not as_path else None))
-        repo_dir = os.path.dirname(os.path.abspath(as_path)) if as_path else None
-        apps = build_app_cards(fidx, args.fdroid_base, repo_dir, overrides, args.offline)
+        try:
+            as_path = None if _is_url(args.fdroid_index) else args.fdroid_index
+            fidx = _read(path=as_path, url=(args.fdroid_index if not as_path else None))
+            repo_dir = os.path.dirname(os.path.abspath(as_path)) if as_path else None
+            apps = build_app_cards(fidx, args.fdroid_base, repo_dir, overrides, args.offline)
+        except Exception as ex:
+            print(f"  ! F-Droid source failed ({ex}); rendering Basecamp only", file=sys.stderr)
 
     print(f"building catalog: {len(apps)} apps + {len(modules)} modules"
           f"{' (offline)' if args.offline else ''}", file=sys.stderr)
