@@ -3,7 +3,7 @@
   "name": "vpavlin-modules",
   "displayName": "vpavlin's Logos Modules",
   "description": "Basecamp modules by vpavlin — KYM, QAKU and friends.",
-  "homepage": "https://modules.vpavlin.xyz/",
+  "homepage": "https://apps.vpavlin.xyz/",
   "indexUrl": "https://github.com/vpavlin/logos-basecamp-modules/releases/download/index/index.json",
   "trustedSigners": []
 }

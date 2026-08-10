@@ -29,7 +29,7 @@ Usage:
 import argparse, base64, html, io, json, os, sys, tarfile, urllib.request
 
 CATALOG_TITLE = "vpavlin's Logos"
-BASECAMP_REPO_URL = "https://modules.vpavlin.xyz/logos-repo.json"  # paste into Basecamp
+BASECAMP_REPO_URL = "https://apps.vpavlin.xyz/logos-repo.json"  # paste into Basecamp
 BASECAMP_INSTALL_URL = "https://logos.co"      # where to get the Basecamp desktop app
 FDROID_INSTALL_URL = "https://f-droid.org"     # where to get the F-Droid client
 CACHE_DIR = os.path.expanduser("~/.cache/logos-catalog-icons")
