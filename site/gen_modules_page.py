@@ -272,15 +272,15 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
     apps_sub = (f'{len(apps)} Android app' + ("s" if len(apps) != 1 else "") +
                 (" · add the repo in F-Droid for auto-updates" if fdroid_repo_url
                  else " · download the APK"))
-    mods_sub = (f'{len(modules)} module' + ("s" if len(modules) != 1 else "") +
-                " · install with lgpd or the Basecamp package manager")
+    mods_sub = (f'{len(modules)} Basecamp app' + ("s" if len(modules) != 1 else "") +
+                " · install with lgpd or the package manager")
     gen = e(generated_at or "")
     return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>{e(CATALOG_TITLE)} — apps &amp; Basecamp modules</title>
+<title>{e(CATALOG_TITLE)} — Android &amp; Basecamp apps</title>
 <style>
   :root {{ --bg:#f6f7f9; --card:#fff; --fg:#16181d; --mut:#5b616e; --line:#e4e7ec;
            --accent:#2563eb; --chip:#eef1f5; }}
@@ -339,11 +339,11 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
 <body>
 <header>
   <h1>{e(CATALOG_TITLE)}</h1>
-  <p>Android apps and Basecamp modules — local-first, on Logos.</p>
+  <p>Local-first apps for Android and Basecamp, on Logos.</p>
 </header>
 <div class="tabs">
-  <button class="tab {a_on}" data-panel="apps">Apps <span>{len(apps)}</span></button>
-  <button class="tab {m_on}" data-panel="modules">Basecamp modules <span>{len(modules)}</span></button>
+  <button class="tab {a_on}" data-panel="apps">Android <span>{len(apps)}</span></button>
+  <button class="tab {m_on}" data-panel="modules">Basecamp <span>{len(modules)}</span></button>
 </div>
 <div class="panel {a_on}" id="panel-apps">
   <div class="ptop"><span class="sub">{apps_sub}</span>{add_repo}</div>
@@ -358,9 +358,9 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
   </main>
 </div>
 <footer>
-  Auto-generated{f' · {gen}' if gen else ''}. Apps come from the F-Droid repo index;
-  modules from the <code>lgpd</code> catalog <code>index.json</code> — icons, versions,
-  descriptions and signers all straight from each published manifest.
+  Auto-generated{f' · {gen}' if gen else ''}. Android apps come from the F-Droid repo
+  index; Basecamp apps from the <code>lgpd</code> catalog <code>index.json</code> — icons,
+  versions, descriptions and signers all straight from each published manifest.
 </footer>
 <script>
   document.querySelectorAll('.tab').forEach(t => t.onclick = () => {{
