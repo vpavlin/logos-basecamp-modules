@@ -256,34 +256,24 @@ def render_card(c):
       </article>"""
 
 
-def render_section(sid, title, subtitle, cards):
-    if not cards:
-        return ""
-    body = "\n".join(render_card(c) for c in cards)
-    return f"""<section>
-  <div class="shead"><h2>{html.escape(title)}</h2><span>{html.escape(subtitle)}</span></div>
-  <main id="{sid}">
-{body}
-  </main>
-</section>"""
+def render_grid(cards):
+    return "\n".join(render_card(c) for c in cards) or \
+        '      <p class="empty">Nothing here yet.</p>'
 
 
 def render_page(apps, modules, fdroid_repo_url, generated_at):
     e = html.escape
-    total = len(apps) + len(modules)
-    apps_sec = render_section(
-        "apps", "Apps",
-        (f'{len(apps)} Android app' + ("s" if len(apps) != 1 else "") +
-         (" · add the F-Droid repo for auto-updates" if fdroid_repo_url else "")),
-        apps)
+    default = "apps" if (apps or not modules) else "modules"
+    a_on = "on" if default == "apps" else ""
+    m_on = "on" if default == "modules" else ""
     add_repo = ""
     if fdroid_repo_url and apps:
-        add_repo = (f'<a class="addrepo" href="{e(fdroid_repo_url)}">+ Add F-Droid repo</a>')
-    mods_sec = render_section(
-        "modules", "Basecamp modules",
-        f'{len(modules)} module' + ("s" if len(modules) != 1 else "") +
-        " · install with lgpd or the package manager",
-        modules)
+        add_repo = f'<a class="addrepo" href="{e(fdroid_repo_url)}">+ Add F-Droid repo</a>'
+    apps_sub = (f'{len(apps)} Android app' + ("s" if len(apps) != 1 else "") +
+                (" · add the repo in F-Droid for auto-updates" if fdroid_repo_url
+                 else " · download the APK"))
+    mods_sub = (f'{len(modules)} module' + ("s" if len(modules) != 1 else "") +
+                " · install with lgpd or the Basecamp package manager")
     gen = e(generated_at or "")
     return f"""<!doctype html>
 <html lang="en">
@@ -304,10 +294,19 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
   header {{ padding:44px 24px 4px; max-width:1080px; margin:0 auto; }}
   header h1 {{ margin:0 0 6px; font-size:30px; letter-spacing:-.02em; }}
   header p {{ margin:0; color:var(--mut); }}
-  section {{ max-width:1080px; margin:0 auto; }}
-  .shead {{ display:flex; align-items:baseline; gap:12px; padding:34px 24px 0; }}
-  .shead h2 {{ margin:0; font-size:19px; }}
-  .shead span {{ color:var(--mut); font-size:13px; }}
+  .tabs {{ max-width:1080px; margin:22px auto 0; padding:0 24px; display:flex; gap:4px;
+    border-bottom:1px solid var(--line); }}
+  .tab {{ background:none; border:0; border-bottom:2px solid transparent; color:var(--mut);
+    font:inherit; font-weight:600; padding:10px 14px; cursor:pointer; margin-bottom:-1px; }}
+  .tab span {{ font-size:12px; background:var(--chip); color:var(--mut); border-radius:999px;
+    padding:1px 8px; margin-left:6px; }}
+  .tab.on {{ color:var(--fg); border-bottom-color:var(--accent); }}
+  .tab.on span {{ background:var(--accent); color:#fff; }}
+  .panel {{ display:none; max-width:1080px; margin:0 auto; }}
+  .panel.on {{ display:block; }}
+  .ptop {{ display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:18px 24px 0; color:var(--mut); font-size:13px; flex-wrap:wrap; }}
+  .empty {{ padding:26px; color:var(--mut); }}
   main {{ padding:14px 24px 0; display:grid;
     grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:16px; }}
   .card {{ background:var(--card); border:1px solid var(--line); border-radius:14px;
@@ -330,9 +329,8 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
   .sig a {{ color:inherit; }}
   .get {{ margin-left:auto; color:var(--accent); font-weight:600; text-decoration:none;
     white-space:nowrap; }}
-  .addrepo {{ display:inline-block; margin:12px 24px 0; padding:6px 13px; font-size:13px;
-    border:1px solid var(--accent); border-radius:999px; color:var(--accent);
-    text-decoration:none; }}
+  .addrepo {{ padding:6px 13px; font-size:13px; border:1px solid var(--accent);
+    border-radius:999px; color:var(--accent); text-decoration:none; white-space:nowrap; }}
   footer {{ max-width:1080px; margin:0 auto; padding:36px 24px 50px; color:var(--mut);
     font-size:12.5px; }}
   footer code {{ background:var(--chip); padding:1px 6px; border-radius:5px; }}
@@ -341,17 +339,36 @@ def render_page(apps, modules, fdroid_repo_url, generated_at):
 <body>
 <header>
   <h1>{e(CATALOG_TITLE)}</h1>
-  <p>{total} thing{'s' if total != 1 else ''} — Android apps and Basecamp modules,
-     local-first and on Logos.</p>
+  <p>Android apps and Basecamp modules — local-first, on Logos.</p>
 </header>
-{apps_sec}
-{add_repo}
-{mods_sec}
+<div class="tabs">
+  <button class="tab {a_on}" data-panel="apps">Apps <span>{len(apps)}</span></button>
+  <button class="tab {m_on}" data-panel="modules">Basecamp modules <span>{len(modules)}</span></button>
+</div>
+<div class="panel {a_on}" id="panel-apps">
+  <div class="ptop"><span class="sub">{apps_sub}</span>{add_repo}</div>
+  <main>
+{render_grid(apps)}
+  </main>
+</div>
+<div class="panel {m_on}" id="panel-modules">
+  <div class="ptop"><span class="sub">{mods_sub}</span></div>
+  <main>
+{render_grid(modules)}
+  </main>
+</div>
 <footer>
   Auto-generated{f' · {gen}' if gen else ''}. Apps come from the F-Droid repo index;
   modules from the <code>lgpd</code> catalog <code>index.json</code> — icons, versions,
   descriptions and signers all straight from each published manifest.
 </footer>
+<script>
+  document.querySelectorAll('.tab').forEach(t => t.onclick = () => {{
+    document.querySelectorAll('.tab,.panel').forEach(x => x.classList.remove('on'));
+    t.classList.add('on');
+    document.getElementById('panel-' + t.dataset.panel).classList.add('on');
+  }});
+</script>
 </body>
 </html>"""
 
