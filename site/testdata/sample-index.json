@@ -1,0 +1,782 @@
+{
+  "schemaVersion": 2,
+  "repositoryName": "unknown",
+  "generatedAt": "2026-08-10T08:03:01Z",
+  "packages": [
+    {
+      "name": "logos_node_1click",
+      "versions": [
+        {
+          "releasedAt": "2026-08-07T11:57:37Z",
+          "publisherRef": "logos_node_1click-v0.2.4",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/logos_node_1click-v0.2.4/logos_node_1click-0.2.4.lgx",
+          "size": 11916356,
+          "sha256": "6adb792d4348cadbc862558e219e1af1ad8ea25240d0643ac4b41727f7478d0a",
+          "rootHash": "3fc7324e43e19c93dd3cec86ff79f3f6c4f727e928d16123b9bba8e25b266060",
+          "manifest": {
+            "author": "",
+            "category": "blockchain",
+            "dependencies": [
+              "blockchain_module"
+            ],
+            "description": "Community 1-click fork",
+            "display_name": "Blockchain node",
+            "hashes": {
+              "root": "3fc7324e43e19c93dd3cec86ff79f3f6c4f727e928d16123b9bba8e25b266060",
+              "variants": "5b67d47730d628fe612e564bffa21fb891787fee352b09204670c74e01feb8da",
+              "variants/darwin-arm64": "f4a95ff38cc319713be22a9fb2b5c3c61b79dd07ea4d7aafc009c5e2b2f886c2",
+              "variants/linux-amd64": "0c8acef8b14e39a7b5bc50cd045f9711a3189193dd1cfdf6e65f5fb76fcf7e56",
+              "variants/linux-arm64": "79ee70ff2e133cfd690e83c483d032bc147d849fa1e3529f78a99f28b256ebc4"
+            },
+            "icon": "blockchain.png",
+            "main": {
+              "darwin-arm64": "logos_node_1click_plugin.dylib",
+              "linux-amd64": "logos_node_1click_plugin.so",
+              "linux-arm64": "logos_node_1click_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "logos_node_1click",
+            "type": "ui_qml",
+            "version": "0.2.4",
+            "view": "qml/BlockchainView.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "6v6npI8/oFHcLSc4l3O1ykMJw3t2SZFOcFo522mfomSBkJ3xUOo+nf9/daiUv6RmT62FGnrXKTLV5a6A0vvgAw==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        },
+        {
+          "releasedAt": "2026-08-07T07:38:12Z",
+          "publisherRef": "logos_node_1click-v0.2.3",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/logos_node_1click-v0.2.3/logos_node_1click-0.2.3.lgx",
+          "size": 11913124,
+          "sha256": "01e77cf35a6a49353c51f466e0e8d8ec638bf46056bbb5e0de144a336d8509ec",
+          "rootHash": "4688e283c333e80dd922475803f9276f9679c03d3bc26c7b700268a430168e5c",
+          "manifest": {
+            "author": "",
+            "category": "blockchain",
+            "dependencies": [
+              "blockchain_module"
+            ],
+            "description": "Community 1-click fork",
+            "display_name": "Blockchain node",
+            "hashes": {
+              "root": "4688e283c333e80dd922475803f9276f9679c03d3bc26c7b700268a430168e5c",
+              "variants": "4fc6b35569b5ee1d25e2ae65ec0ae71ec11c8306f29ecb5d62e6ee2be7ffb232",
+              "variants/darwin-arm64": "72b76f86ed6fbc7ce37da7fef1f9251fa74d63000652cc1da45e6d9f342595a2",
+              "variants/linux-amd64": "b733d69bf6c419d2b8ef066bf4c768d156c925de0fc5a9ed3e05660b341fabbc",
+              "variants/linux-arm64": "8c0bb646495dadce58dc850159e1fb85f42ff7e8b67321c3fdae3dde1b1781d0"
+            },
+            "icon": "blockchain.png",
+            "main": {
+              "darwin-arm64": "logos_node_1click_plugin.dylib",
+              "linux-amd64": "logos_node_1click_plugin.so",
+              "linux-arm64": "logos_node_1click_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "logos_node_1click",
+            "type": "ui_qml",
+            "version": "0.2.3",
+            "view": "qml/BlockchainView.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "6B3sW1jzlOB6h4heuyWIAdxpzds7HZDq3EiWUZcHC0L1sFbE17zJFhJcBs2WVa20tkdswP7t7z9mmj0O8EqODw==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        },
+        {
+          "releasedAt": "2026-08-06T00:25:14Z",
+          "publisherRef": "logos_node_1click-v0.2.2",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/logos_node_1click-v0.2.2/logos_node_1click-0.2.2.lgx",
+          "size": 11878916,
+          "sha256": "6d3f1b57ca721d1b8c2e2f78ec39f4759d208007c810300936f015264f6bfe2a",
+          "rootHash": "6904e2df14db2ca43b2489111b6d687222aa907048a0fa7c056072a6e3296b82",
+          "manifest": {
+            "author": "",
+            "category": "blockchain",
+            "dependencies": [
+              "blockchain_module"
+            ],
+            "description": "Community 1-click fork",
+            "display_name": "Blockchain node",
+            "hashes": {
+              "root": "6904e2df14db2ca43b2489111b6d687222aa907048a0fa7c056072a6e3296b82",
+              "variants": "2b55a150d629ad2cec3166bb8a9c13f9f1151754b9518d441c5cc4285c1e0dfc",
+              "variants/darwin-arm64": "a9fb619ffaa7829ac1e773199c87bc2ac3ba2872623cff760c51cea1c37b8c8c",
+              "variants/linux-amd64": "59647c2466c83e9109cd7b3c2863e6587a5a7713134087577e46cd9fc52cafe2",
+              "variants/linux-arm64": "4e693860a4477b158a2ec14516b902fd61b2bea51a2a57acda18788c90b421e2"
+            },
+            "icon": "blockchain.png",
+            "main": {
+              "darwin-arm64": "logos_node_1click_plugin.dylib",
+              "linux-amd64": "logos_node_1click_plugin.so",
+              "linux-arm64": "logos_node_1click_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "logos_node_1click",
+            "type": "ui_qml",
+            "version": "0.2.2",
+            "view": "qml/BlockchainView.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "3VDS8lVGyWxx3Qk5UcHkOxROKcw8RnR4jexE0yPnRadj24FmHe5pa3aGLxeA1l1QBD8Bpz4cjOAhKtBhS7o2BA==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "docs_logos",
+      "versions": [
+        {
+          "releasedAt": "2026-08-07T09:14:38Z",
+          "publisherRef": "docs_logos-v0.1.0",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/docs_logos-v0.1.0/docs_logos-0.1.0.lgx",
+          "size": 13892548,
+          "sha256": "9a5efbe74f4bf8c5258f544b9b98b23316bda2f13aeec7312b0e6a968fb3bade",
+          "rootHash": "56f056889b4dfb5ac44724008b06e1153e3d47bc610284bcdcb74d1a167048bc",
+          "manifest": {
+            "author": "",
+            "category": "utility",
+            "dependencies": [],
+            "description": "Docs — ask questions about Logos & Basecamp and get the exact passage from the official docs (docs.logos.co) and blog, with a link. Local keyword search; open any result full-screen and refresh the docs on demand.",
+            "hashes": {
+              "root": "56f056889b4dfb5ac44724008b06e1153e3d47bc610284bcdcb74d1a167048bc",
+              "variants": "6cd2ef0a8d43a4c1f8e4aab74b21833d2c67a96997897a5e8ed76a1a2e025b7c",
+              "variants/darwin-arm64": "bc9ca21ca6a7702a9ddee33e59a8f9c7c8aae81549629481b5e1dde56b407469",
+              "variants/linux-amd64": "2d03a03103644c730dbe20e1e4e19f5f715c021c8e017cf339a532bef857041a",
+              "variants/linux-arm64": "2f458c0a79a6d961cb304bb2db03a91c318901cb2f309042df8b221c9a05c474"
+            },
+            "icon": "icon.png",
+            "main": {
+              "darwin-arm64": "docs_logos_plugin.dylib",
+              "linux-amd64": "docs_logos_plugin.so",
+              "linux-arm64": "docs_logos_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "docs_logos",
+            "type": "ui_qml",
+            "version": "0.1.0",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "CroD0IeKCwLTsXnTBZQ1kakgGX4pe4zlkyIEc8C1jFLsvnD53bCCglOCR2bgblHqJ4q2jx3nPMS5Fnetuc5UCA==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "blockchain_module",
+      "versions": [
+        {
+          "releasedAt": "2026-08-05T23:48:39Z",
+          "publisherRef": "blockchain_module-v0.2.1",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/blockchain_module-v0.2.1/blockchain_module-0.2.1.lgx",
+          "size": 143142020,
+          "sha256": "89d4603daa80d7b3929e401027129f5e74e36bf3b22061c67344b3d88540a85b",
+          "rootHash": "c33c59d690b206476214e5fcacaee08bd56911ad855ae9c08919005b5f3b3c43",
+          "manifest": {
+            "author": "Logos Blockchain Team",
+            "category": "blockchain",
+            "dependencies": [],
+            "description": "Logos blockchain node for logos-core",
+            "display_name": "Blockchain Module",
+            "hashes": {
+              "root": "c33c59d690b206476214e5fcacaee08bd56911ad855ae9c08919005b5f3b3c43",
+              "variants": "7e55a257b08fc554713e0fc0b25415df4a779184a061a8b9847a616d9c828049",
+              "variants/darwin-arm64": "323edb713c88d22c3a2ee8b021c124f3420368035247765b2641516f05cb21a3",
+              "variants/linux-amd64": "0bf03e1d11c4ebd9f4873f0160ca8bae259c147b08a48899af0411316521b947",
+              "variants/linux-arm64": "6ee088926e65e05492808eff770b6bdc88f46e2ec1e9e81e572ce3d260b2ccbe"
+            },
+            "icon": "",
+            "main": {
+              "darwin-arm64": "blockchain_module_plugin.dylib",
+              "linux-amd64": "blockchain_module_plugin.so",
+              "linux-arm64": "blockchain_module_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "blockchain_module",
+            "type": "core",
+            "version": "0.2.1"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "OQvdmZ2z6rJXRm/jhdF6Kp8SUuiVp/R1wG++z/QL0h/fTI7NatqnOwy3TmA/LzZ0bSSIHZMNETLx289FLX3pAw==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        },
+        {
+          "releasedAt": "2026-07-31T12:31:34Z",
+          "publisherRef": "blockchain_module-v0.2.0",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/blockchain_module-v0.2.0/blockchain_module-0.2.0.lgx",
+          "size": 142143969,
+          "sha256": "bea60a3de56f65498aa436c8e4ca05e1fc205acfc75284e54be440792b8774f8",
+          "rootHash": "a96fc1abbed6c0d360fbd0b49bda834cbc671be172359ebb5e5c2a716ad5da40",
+          "manifest": {
+            "author": "Logos Blockchain Team",
+            "category": "blockchain",
+            "dependencies": [],
+            "description": "Logos blockchain node for logos-core",
+            "hashes": {
+              "root": "a96fc1abbed6c0d360fbd0b49bda834cbc671be172359ebb5e5c2a716ad5da40",
+              "variants": "2f0cf6c458e1699bd053359a9b46111626dfbfbbfe14850d116eccb6aea5b647",
+              "variants/darwin-arm64": "645fc010c0823471959d44ade761a7b73039955c04001be5c8963febe4ec3260",
+              "variants/linux-amd64": "b96b910ee0028366905eabcc006ea797474c6ede481acb3089b0ca96c7a03ed8",
+              "variants/linux-arm64": "0222304687c6adef42b501bc566009f435a1dee154ab6c3ca23a0c0d070859bb"
+            },
+            "icon": "",
+            "main": {
+              "darwin-arm64": "blockchain_module_plugin.dylib",
+              "linux-amd64": "blockchain_module_plugin.so",
+              "linux-arm64": "blockchain_module_plugin.so"
+            },
+            "manifestVersion": "0.2.0",
+            "name": "blockchain_module",
+            "type": "core",
+            "version": "0.2.0"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "xJsYPOwRGj2rPHLfpTva+nFUnMEhEfWVl+oKEx4bmw5k8+FqnXjGR8mmFwa/yhzU9tjZng/z17y0UHqFMSNFAg==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "receiver_ui",
+      "versions": [
+        {
+          "releasedAt": "2026-08-04T20:17:31Z",
+          "publisherRef": "receiver_ui-v0.3.0",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/receiver_ui-v0.3.0/receiver_ui-0.3.0.lgx",
+          "size": 31547197,
+          "sha256": "5c8f9b00810cfe4d51fbac03c4a34601f991f90789bfac663fb7204b2c29f656",
+          "rootHash": "62ec0618d5b5a840059ea022b981e8460eb31fcc105b45bb706b39a707f9ce75",
+          "manifest": {
+            "author": "",
+            "category": "messaging",
+            "dependencies": [
+              "delivery_module"
+            ],
+            "description": "Receiver — discover and listen to decentralized Logos radio broadcasts over LogosMessaging. Listen-only (no hosting); runs on the latest Basecamp, Linux and macOS/arm.",
+            "hashes": {
+              "root": "62ec0618d5b5a840059ea022b981e8460eb31fcc105b45bb706b39a707f9ce75",
+              "variants": "48ed303127793811f56b0b6bade2a7f3085a93fd88f57759b26b48cd11ca3b9a",
+              "variants/darwin-arm64": "926de76791da665a159d3b7f6d1b26b5b1165b246a1474e6d265bdd65e9734fe",
+              "variants/linux-amd64": "4fba11606772dbcce3b5584809937c482351df30f40a73a2b3ea9cbe9d2ba33d"
+            },
+            "icon": "receiver.png",
+            "main": {
+              "darwin-arm64": "receiver_ui_plugin.dylib",
+              "linux-amd64": "receiver_ui_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "receiver_ui",
+            "type": "ui_qml",
+            "version": "0.3.0",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "ERSaPRupiYhwKZ5P3X/kxZAuXogzMObD6sQDgoyMnY6FdMmfEPfm7jTmL84G5040MfyCoHht4q1KrnrAdJiSDQ==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        },
+        {
+          "releasedAt": "2026-07-28T23:52:02Z",
+          "publisherRef": "receiver_ui-v0.2.8",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/receiver_ui-v0.2.8/receiver_ui-0.2.8.lgx",
+          "size": 18812406,
+          "sha256": "67885d14fb253399800840714b20037c9c8181bb0b434e9e33d1ce0eb658c1ef",
+          "rootHash": "d7a0d8f7fa8e39459ae36634bfeaa5beefacd6933b50f22709d86f5bb6d92bc7",
+          "manifest": {
+            "author": "",
+            "category": "messaging",
+            "dependencies": [
+              "delivery_module"
+            ],
+            "description": "Receiver — discover and listen to decentralized Logos radio broadcasts over LogosMessaging. Listen-only (no hosting); runs on the latest Basecamp, Linux and macOS/arm.",
+            "hashes": {
+              "root": "d7a0d8f7fa8e39459ae36634bfeaa5beefacd6933b50f22709d86f5bb6d92bc7",
+              "variants": "ebcbb69b697cce8625d1b941fa50a0bd110d72a20fbcc129dd387bae8fee5dcd",
+              "variants/darwin-arm64": "5f95a44ba4521c3855336eb25057b10d7d612587a18d51777425736721c70ec4",
+              "variants/linux-amd64": "0ca7a5ecec4571dcd3a4c2afbe6276ebe9614f155f61b8b862d51e9da1864590",
+              "variants/linux-arm64": "3cd99957a2390e6695dd4f6049d5c05e401c2c14c6718ccf38bd6d1a68a30eaa"
+            },
+            "icon": "receiver.png",
+            "main": {
+              "darwin-arm64": "receiver_ui_plugin.dylib",
+              "linux-amd64": "receiver_ui_plugin.so",
+              "linux-arm64": "receiver_ui_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "receiver_ui",
+            "type": "ui_qml",
+            "version": "0.2.8",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "6coAJoIfR7ah2ldeUGerkNWVPqigI9bstA0xrhzYfbTwgSDlrOuc4gNVpPg2o2G1m0WhUQX21Zebha/Ll7OJAQ==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        },
+        {
+          "releasedAt": "2026-07-28T23:07:45Z",
+          "publisherRef": "receiver_ui-v0.2.7",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/receiver_ui-v0.2.7/receiver_ui-0.2.7.lgx",
+          "size": 18810359,
+          "sha256": "7e23852219aff8f3adcf8ea559b5bd7261c14c56e6870b91f6e45fa469e8e290",
+          "rootHash": "e1b749130cecfe9a93910051d0ac69f5ada54c331c1984167f40cd4919f04e43",
+          "manifest": {
+            "author": "",
+            "category": "messaging",
+            "dependencies": [
+              "delivery_module"
+            ],
+            "description": "Receiver — discover and listen to decentralized Logos radio broadcasts over LogosMessaging. Listen-only (no hosting); runs on the latest Basecamp, Linux and macOS/arm.",
+            "hashes": {
+              "root": "e1b749130cecfe9a93910051d0ac69f5ada54c331c1984167f40cd4919f04e43",
+              "variants": "be8b79a773188e3619310c4ed09e12eac2eeb0db6ccc8dbe94e55ced5e3996f6",
+              "variants/darwin-arm64": "a12ef926684a3ef038b6f69f2291d3a35260dd9f9d94d37f3359a5c5004e77fd",
+              "variants/linux-amd64": "9b7f2eff8493b7e48cbeebaac7f6616a13aca90704bc13e46ee11c8c1e36014f",
+              "variants/linux-arm64": "a7f3c23f6c40d599809838eb5273b63057d5a20fdd4e4fb1bc5c0bfd1931c682"
+            },
+            "icon": "receiver.png",
+            "main": {
+              "darwin-arm64": "receiver_ui_plugin.dylib",
+              "linux-amd64": "receiver_ui_plugin.so",
+              "linux-arm64": "receiver_ui_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "receiver_ui",
+            "type": "ui_qml",
+            "version": "0.2.7",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "zYK46xaFJ//yf+mt+gPJcMzUdqUea+lwGBEpyQeTh6pB37Dc0iBahhsYAchDUeyBhnC+o9f+AD2cvCnzyuLVCg==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        },
+        {
+          "releasedAt": "2026-07-22T12:03:38Z",
+          "publisherRef": "receiver_ui-v0.2.6",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/receiver_ui-v0.2.6/receiver_ui-0.2.6.lgx",
+          "size": 17766615,
+          "sha256": "561ef3a7246166142ba14f7a98472841c12ce55c4205a6c811ada7b68b693cd6",
+          "rootHash": "649785d911cd607338748d9a3eb4a65601d764d314ef13c6892e7e56e86a85a3",
+          "manifest": {
+            "author": "",
+            "category": "messaging",
+            "dependencies": [
+              "delivery_module"
+            ],
+            "description": "Receiver — discover and listen to decentralized Logos radio broadcasts over LogosMessaging. Listen-only (no hosting); runs on the latest Basecamp, Linux and macOS/arm.",
+            "hashes": {
+              "root": "649785d911cd607338748d9a3eb4a65601d764d314ef13c6892e7e56e86a85a3",
+              "variants": "b5a0c34d1df81a19995dc97f27854a306b7c0229dee4fecd69998812dab38d94",
+              "variants/darwin-arm64": "fe77ba894aff252688a658c822ad72cfc2dccfca514b2e0b401f5c84a1fbe7f9",
+              "variants/linux-amd64": "db349cf2c60db82b30d56bd10272f9cc08fdab3a4b37cd727fb044a745d3a13e",
+              "variants/linux-arm64": "4698ef8e549154edba2c7a06c1d54c07f29c50e722a66ee98d8d6d02099a7946"
+            },
+            "icon": "receiver.png",
+            "main": {
+              "darwin-arm64": "receiver_ui_plugin.dylib",
+              "linux-amd64": "receiver_ui_plugin.so",
+              "linux-arm64": "receiver_ui_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "receiver_ui",
+            "type": "ui_qml",
+            "version": "0.2.6",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "gA0wZ1xsgKeQosgi1+BixmAM4kAnrTUKUojcQ/WDVL11a1BR61REAYApGcAXQiDbbTKtNF1pHBHsf0GZU2HBDw==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "zk_guess_game",
+      "versions": [
+        {
+          "releasedAt": "2026-08-03T15:38:35Z",
+          "publisherRef": "zk_guess_game-v0.1.1",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/zk_guess_game-v0.1.1/zk_guess_game-0.1.1.lgx",
+          "size": 172044190,
+          "sha256": "509974c543a3be38b1b24e23495b6a5925f16fe9e3852968394c864de5e5b730",
+          "rootHash": "5b5131ec4be9243f4a88e62b5bd2feb33de807d84b497735786b71363bfa8e23",
+          "manifest": {
+            "author": "",
+            "category": "game",
+            "dependencies": [
+              "delivery_module"
+            ],
+            "description": "ZK Guess — a provably-fair number-guessing party game. Create or join a room by code over Logos Messaging; the machine proves above/below without revealing the number.",
+            "hashes": {
+              "root": "5b5131ec4be9243f4a88e62b5bd2feb33de807d84b497735786b71363bfa8e23",
+              "variants": "7fd70fa7866229cba5cb1f4b6096615da2338feb06047775504e0685c64e01ef",
+              "variants/darwin-arm64": "df8a7f6c9f1ee7af04f6fd0c797de7f07521ab4e3dc348b7a3db25042aad5a7d",
+              "variants/linux-amd64": "1e02f554c7e1d59bdba5518df34908799d5e871ba892e84b439b8e45a9057d0c"
+            },
+            "icon": "icon.png",
+            "main": {
+              "darwin-arm64": "zk_guess_game_plugin.dylib",
+              "linux-amd64": "zk_guess_game_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "zk_guess_game",
+            "type": "ui_qml",
+            "version": "0.1.1",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "wmGuNctDX0Pbg9Ib9wQF5ub+F1DOsnRS6H77ZgKLqyPwMNyGzmCxtEf1h377llaPI8m8qviArHe7ar6F8di6AA==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "radio_ui",
+      "versions": [
+        {
+          "releasedAt": "2026-07-28T22:54:50Z",
+          "publisherRef": "radio_ui-v0.2.2",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/radio_ui-v0.2.2/radio_ui-0.2.2-linux-amd64.lgx",
+          "size": 3881749,
+          "sha256": "1fa02065b4f186f1269be7656e7ca433bf8edb5c4c57a1cb80a41f0b613be437",
+          "rootHash": "2bd23581b705dc467186c87a1a7f752d15e060fe2cce50a5ea40549cb7f788ed",
+          "manifest": {
+            "author": "",
+            "category": "media",
+            "dependencies": [
+              "radio_module"
+            ],
+            "description": "Booth — broadcast a station (RTMP → MediaMTX, announce over delivery, direct or .onion). Universal ui_qml calling radio_module.",
+            "hashes": {
+              "root": "2bd23581b705dc467186c87a1a7f752d15e060fe2cce50a5ea40549cb7f788ed",
+              "variants": "56ecd3081a67b19c85039f3e5f809d017c45f2d83c05f7f938a3aac8e263a326",
+              "variants/linux-amd64": "eb1e24df88b2d10be476ce24b0e10668cc3c023e920e8f0f1ec9d36d8d274872"
+            },
+            "icon": "radio.png",
+            "main": {
+              "linux-amd64": "radio_ui_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "radio_ui",
+            "type": "ui_qml",
+            "version": "0.2.2",
+            "view": "Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "AO02gfPPriYFXE2d3Ua2jiAFCp7KzgN9Paum9Fq1NyP1+TVoBIz/9GihcSxVk6YDtJWOqlwVjTzzXfZCdLiCAw==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        },
+        {
+          "releasedAt": "2026-07-06T17:12:20Z",
+          "publisherRef": "radio_ui-v0.2.1",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/radio_ui-v0.2.1/radio_ui-0.2.1.lgx",
+          "size": 3876916,
+          "sha256": "48e3215cc6fcaa04b82eda6327fbbeb07d990c7e71fcd909a2882936f08f461a",
+          "rootHash": "696deb9adf752431e626b112dc195cddbefdd0f2e5bdf6c738bcd7d3ff45e397",
+          "manifest": {
+            "author": "",
+            "category": "media",
+            "dependencies": [
+              "radio_module"
+            ],
+            "description": "Booth — broadcast a station (RTMP → MediaMTX, announce over delivery, direct or .onion). Universal ui_qml calling radio_module.",
+            "hashes": {
+              "root": "696deb9adf752431e626b112dc195cddbefdd0f2e5bdf6c738bcd7d3ff45e397",
+              "variants": "e4888dcf7fb09d47af0067489a3521551f7a2f4a1b97155ea54c8d8ecd90e080",
+              "variants/linux-amd64": "da139f96201da16ffbed2ee93e29ff03aef02529b3968407ab4900e280329eb6"
+            },
+            "icon": "radio.png",
+            "main": {
+              "linux-amd64": "radio_ui_plugin.so"
+            },
+            "manifestVersion": "0.3.0",
+            "name": "radio_ui",
+            "type": "ui_qml",
+            "version": "0.2.1",
+            "view": "Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "jMWrlbqNdegeW7MqNLvm/lpLaRyipeA5YxUx6SzWooACNcoRx7ZF64/2UhIj4BXBZhjzgoT1B2puk49y5jDEBA==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "radio_module",
+      "versions": [
+        {
+          "releasedAt": "2026-07-28T22:54:47Z",
+          "publisherRef": "radio_module-v0.1.1",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/radio_module-v0.1.1/radio_module-0.1.1-linux-amd64.lgx",
+          "size": 6779146,
+          "sha256": "b9287e6bdda6f41a03343e434294490d29a511351c85c7a33b1d4c283def7846",
+          "rootHash": "0f38766026853e13602b7dead192c264f08654200d8b03fb63b5426772192a2a",
+          "manifest": {
+            "author": "",
+            "category": "media",
+            "dependencies": [
+              "delivery_module"
+            ],
+            "description": "Decentralized audio broadcast: MediaMTX origin control, ffplay playback, and LogosMessaging discovery (announce/subscribe).",
+            "hashes": {
+              "root": "0f38766026853e13602b7dead192c264f08654200d8b03fb63b5426772192a2a",
+              "variants": "ce89654ae41f8361383d738e11ceabebebc2645cea8b40a967280a19cbe8054d",
+              "variants/linux-amd64": "01283156c6028008f8373d3267027e89d18e4912c407a5282d7a534fd0b1a052"
+            },
+            "icon": "",
+            "main": {
+              "linux-amd64": "radio_module_plugin.so"
+            },
+            "manifestVersion": "0.2.0",
+            "name": "radio_module",
+            "type": "core",
+            "version": "0.1.1"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "+uyjA463Mk0/9ZFcIWpuUEhvww4K1XRu5g0FDCPb24wQxsGk2YfdknXtwJ32/+kgsfiussg3/UbVuSCbNYwEAQ==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        },
+        {
+          "releasedAt": "2026-07-06T16:44:51Z",
+          "publisherRef": "radio_module-v0.1.0",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/radio_module-v0.1.0/radio_module-0.1.0.lgx",
+          "size": 6282746,
+          "sha256": "3066def6a4e307ef2fb5c3f88e94aff4c58ff93918f366b816d623d62965b25c",
+          "rootHash": "693d57dffbb3766cf1da7e9609f20ae4d81da45a2b4e3818605df1ebd435a9b1",
+          "manifest": {
+            "author": "",
+            "category": "media",
+            "dependencies": [
+              "delivery_module"
+            ],
+            "description": "Decentralized audio broadcast: MediaMTX origin control, ffplay playback, and LogosMessaging discovery (announce/subscribe).",
+            "hashes": {
+              "root": "693d57dffbb3766cf1da7e9609f20ae4d81da45a2b4e3818605df1ebd435a9b1",
+              "variants": "fdcfc371d09d56cd3b53f7518087b7df4d540c8c893a4fe5c702818d4b6b2f8c",
+              "variants/linux-amd64": "dd8ceb1c289e347633fb662bc3152f9b8a5db097af953545b90987b007e84f64"
+            },
+            "icon": "",
+            "main": {
+              "linux-amd64": "radio_module_plugin.so"
+            },
+            "manifestVersion": "0.2.0",
+            "name": "radio_module",
+            "type": "core",
+            "version": "0.1.0"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "kNN2tc0CJJ0H0rTMQX1aQ55U5XUL47UjUQ9nJ3E6aKBdnj5JnYj353JbxP/4L1jwBvDEipiy7VBXqR7KbcvSCA==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "archive_ui",
+      "versions": [
+        {
+          "releasedAt": "2026-07-10T04:35:28Z",
+          "publisherRef": "archive_ui-v0.2.0",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/archive_ui-v0.2.0/archive_ui-0.2.0.lgx",
+          "size": 13750,
+          "sha256": "5a00c217cd59ab95f62239a21ffb53b9c36a618da490efde604b0ca0ae6f2a9b",
+          "rootHash": "d33fc0581f4eee29c6d1849b62a9bef6a83e2bd227fceeba839116135476ae46",
+          "manifest": {
+            "author": "",
+            "category": "storage",
+            "dependencies": [
+              "archive"
+            ],
+            "description": "Archive — follow curated LEZ channels and preserve their collections to Logos Storage.",
+            "hashes": {
+              "root": "d33fc0581f4eee29c6d1849b62a9bef6a83e2bd227fceeba839116135476ae46",
+              "variants": "30c2de7d69db81dcaa149c695fbc347be606317a85a15bbcea3ce0e518670bda",
+              "variants/linux-amd64": "7827407fc7d8522b84deff9b5bbcfe0102d50836b49b13430f59bcf84e4cb774"
+            },
+            "icon": "archive.png",
+            "main": {},
+            "manifestVersion": "0.2.0",
+            "name": "archive_ui",
+            "type": "ui_qml",
+            "version": "0.2.0",
+            "view": "qml/Main.qml"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "r+rmI1zDJ+2kPxQBTaFlMai/mKh98uFDpHuE2fEqzsE3Ym4y5VzSUZFRrYf1/DEko1pPazEkNppUTDGx31QQAQ==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "archive",
+      "versions": [
+        {
+          "releasedAt": "2026-07-10T04:30:35Z",
+          "publisherRef": "archive-v0.2.0",
+          "url": "https://github.com/xAlisher/logos-basecamp-modules/releases/download/archive-v0.2.0/archive-0.2.0.lgx",
+          "size": 899083,
+          "sha256": "c8b6f05ede9bc2e00dfad3427733b070ecd53b3f04c4d502105a062293edc1dd",
+          "rootHash": "1b6594c59b55b534f42daad6ee3c981c3024e8cedfbab586fe6c484cff0ad601",
+          "manifest": {
+            "author": "",
+            "category": "storage",
+            "dependencies": [],
+            "description": "Follow curated archive channels (Logos Execution Zone) and help preserve their collections to Storage. Pure HTTP client — no platform deps, builds on Mac/Win/Linux.",
+            "hashes": {
+              "root": "1b6594c59b55b534f42daad6ee3c981c3024e8cedfbab586fe6c484cff0ad601",
+              "variants": "ca1cc87cb7808ee1072eebafb40ff15e42e810352df60dfa2b8c37a5902b5ea3",
+              "variants/darwin-arm64": "d1e3bd4f688ee68548d74775adcc6ca61f5baf42672e63bb334cb731de708542",
+              "variants/linux-amd64": "84a699a93067b7461f0e538f109724faf282300dedc2a6cfa7f90b209e79acb8",
+              "variants/linux-arm64": "0fee8d106f539b370ba837a9285c353608242fdf577aafc538960fdd40889124"
+            },
+            "icon": "archive.png",
+            "main": {
+              "darwin-arm64": "archive_plugin.dylib",
+              "linux-amd64": "archive_plugin.so",
+              "linux-arm64": "archive_plugin.so"
+            },
+            "manifestVersion": "0.2.0",
+            "name": "archive",
+            "type": "core",
+            "version": "0.2.0"
+          },
+          "signature": {
+            "algorithm": "ed25519",
+            "did": "did:jwk:eyJjcnYiOiJFZDI1NTE5Iiwia3R5IjoiT0tQIiwieCI6InpXbS1DZC04OHpPZVYybWszOW93enhfU2Z5azdnRXNlNk1iTTRpSFVpSm8ifQ",
+            "linkedDids": [],
+            "signature": "W29bSNTX8wV5Y9iD13jjypUYe7LbbXDfBhBtDpuf2HzqvbW5nbGVOPN8q2Ij4ZgP6h45fxv7zxhuvLm2ih57Bg==",
+            "signer": {
+              "name": "xAlisher",
+              "url": "https://github.com/xAlisher"
+            },
+            "version": 1
+          }
+        }
+      ]
+    }
+  ]
+}

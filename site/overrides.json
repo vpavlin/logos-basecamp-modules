@@ -1,0 +1,5 @@
+{
+  "_comment": "OPTIONAL editorial layer, keyed by module name, merged OVER the autoloaded manifest. Every fact (title, version, icon, description, signer) is read from index.json automatically — this file only exists for things a manifest can't know. All keys optional; delete this file entirely and the catalog still renders. Supported keys per module: featured (bool, floats to top), bucket (string, overrides the category grouping), blurb (string, longer marketing copy than the manifest description), homepage (string, links the title).",
+  "kym": { "featured": true },
+  "qaku": { "featured": true }
+}

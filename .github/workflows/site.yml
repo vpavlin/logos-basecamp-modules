@@ -1,0 +1,67 @@
+name: Build catalog site
+
+# Rebuilds the landing page straight from the published index.json and
+# deploys it to GitHub Pages (custom domain modules.vpavlin.xyz).
+# Runs on site changes, after the index is rebuilt, daily, and on demand.
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "logos-repo.json", ".github/workflows/site.yml"]
+  workflow_run:
+    workflows: ["Rebuild index"]      # re-render whenever the index changes
+    types: [completed]
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch published index.json (tolerate first-run absence)
+        run: |
+          URL=$(python3 -c "import json;print(json.load(open('logos-repo.json'))['indexUrl'])")
+          echo "indexUrl=$URL"
+          if ! curl -fsSL "$URL" -o index.json; then
+            echo "no index yet — rendering an empty catalog"
+            echo '{"schemaVersion":2,"repositoryName":"vpavlin-modules","packages":[]}' > index.json
+          fi
+
+      - name: Cache extracted module icons
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/logos-catalog-icons
+          key: lgx-icons-${{ hashFiles('index.json') }}
+          restore-keys: lgx-icons-
+
+      - name: Generate page
+        run: |
+          python3 site/gen_modules_page.py \
+            --index index.json \
+            --overrides site/overrides.json \
+            --out dist/index.html
+          echo "modules.vpavlin.xyz" > dist/CNAME
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deploy
+        uses: actions/deploy-pages@v4
