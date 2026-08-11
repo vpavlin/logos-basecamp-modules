@@ -1,5 +1,13 @@
 {
-  "_comment": "OPTIONAL editorial layer, keyed by module name, merged OVER the autoloaded manifest. Every fact (title, version, icon, description, signer) is read from index.json automatically — this file only exists for things a manifest can't know. All keys optional; delete this file entirely and the catalog still renders. Supported keys per module: featured (bool, floats to top), bucket (string, overrides the category grouping), blurb (string, longer marketing copy than the manifest description), homepage (string, links the title).",
-  "kym": { "featured": true },
-  "qaku": { "featured": true }
+  "_comment": "OPTIONAL editorial layer, keyed by module/app name or package, merged OVER the autoloaded manifest. Every fact (title, version, icon, description, signer) is read from index.json automatically — this file only exists for things a manifest can't know. All keys optional; delete this file entirely and the catalog still renders. Supported keys per entry: featured (bool, floats to top), bucket (string, overrides the category grouping), blurb (string, longer copy than the manifest description), homepage (string, links the title), repo/source (string, → a 'Source' link), docs (string, → a 'Docs' link), website (string, → a 'Website' link). Basecamp module manifests carry NO repo URL, so add repo here to expose source; F-Droid apps already expose sourceCode/webSite and get Source/Website links automatically.",
+
+  "kym":             { "featured": true, "repo": "https://github.com/vpavlin/kym" },
+  "kym_core":        { "repo": "https://github.com/vpavlin/kym" },
+  "qaku":            { "featured": true, "repo": "https://github.com/vpavlin/qaku-logos" },
+  "qaku_core":       { "repo": "https://github.com/vpavlin/qaku-logos" },
+  "delivery_module": { "repo": "https://github.com/vpavlin/logos-shared-delivery" },
+  "perun_analytics": { "repo": "https://github.com/vpavlin/perun" },
+
+  "xyz.vpavlin.kym":  { "featured": true },
+  "xyz.vpavlin.qaku": { "featured": true }
 }
